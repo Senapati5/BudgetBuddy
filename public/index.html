@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Buddy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logofinal.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+    <img src="logofinal.png" width="90px" height="50px" alt="Budget Buddy Logo" onclick="openTeamModal()">
+    <span class="tagline">"Because every buddy needs a budget💸"</span>
+</div>
+        
+
+        <div class="navbar-right">
+            <div class="profile-info">
+                <img id="profile-picture" src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg" height="50px" width="50px" alt="User Profile">
+                <div class="user-text">
+                    <h2>Hello, <span id="user-name"></span></h2>
+                    <p>
+                        <small><i>Welcome to</i></small>
+                        <b style="font-weight: 700; font-family: 'Times New Roman', Times, serif;">Budget Buddy</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+
+    
+
+    <!-- Profile Modal (Hidden by default) -->
+    <div id="profile-modal" class="profile-modal">
+        <div class="modal-content">
+            <img id="modal-profile-picture" src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg" height="50px" width="50px" alt="User Profile">
+            <h2>User Details</h2>
+            <p><strong>Name:</strong> <span id="modal-name"></span></p>
+            <p><strong>Username:</strong> <span id="modal-username"></span></p>
+            <p><strong>Email: </strong><span id="modal-email"></span></p> <!-- Email section -->
+        <p><strong>Mobile: </strong> <span id="modal-mobile"></span></p> <!-- Mobile section -->
+            <button id="modal-logout-button" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+
+    <!-- Team Member Modal -->
+<!-- Team Member Modal -->
+<div id="team-modal" class="team-modal">
+    <div class="modal-content2">
+        <span class="close-button" onclick="closeTeamModal()">&times;</span> <!-- Close Button -->
+        
+        <div class="responsive-container-block container">
+            <p class="text-blk team-head-text">
+              Meet The Team !!
+            </p>
+            <p class="text-blk team-name-text">
+                localhost:0000
+              </p>
+            <div class="responsive-container-block">
+              <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                  <div class="team-image-wrapper">
+                    <img class="team-member-image" src="ASSEST/TEAM MEM 1.jpg">
+                  </div>
+                  <p class="text-blk name">
+                    Senapati Arpan
+                  </p>
+                  <p class="text-blk position">
+                    TEAM LEADER
+                  </p>
+                  <div class="social-icons">
+                    <a href="https://github.com/Senapati5" target="_blank">
+                      <img class="github-icon" src="ASSEST/github-mark.png" width="25px" height="25px">
+                    </a>
+                    <a href="https://www.linkedin.com/in/senapati-arpan-5a5831278/" target="_blank">
+                      <img class="linkedin-icon" src="ASSEST/linked in.png" width="30px" height="30px">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                  <div class="team-image-wrapper">
+                    <img class="team-member-image" src="ASSEST/TEAM MEM 2.jpeg">
+                  </div>
+                  <p class="text-blk name">
+                    Harajit Chandra Das
+                  </p>
+                  <p class="text-blk position">
+                    VICE TEAM LEADER
+                  </p>
+                  <div class="social-icons">
+                    <a href="https://github.com/HARAJIT05" target="_blank">
+                      <img class="github-icon" src="ASSEST/github-mark.png" width="25px" height="25px">
+                    </a>
+                    <a href="https://www.linkedin.com/in/harajit-das-a89786235/" target="_blank">
+                      <img class="linkedin-icon" src="ASSEST/linked in.png" width="30px" height="30px">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                  <div class="team-image-wrapper">
+                    <img class="team-member-image" src="ASSEST/TEAM MEM 3.jpg">
+                  </div>
+                  <p class="text-blk name">
+                    Priya Naiya
+                  </p>
+                  <p class="text-blk position">
+                    BACKEND DEVELOPER
+                  </p>
+                  <div class="social-icons">
+                    <a href="https://github.com/naiyapriya" target="_blank">
+                      <img class="twitter-icon" src="ASSEST/github-mark.png" width="25px" height="25px">
+                    </a>
+                    <a href="https://www.linkedin.com/in/contactpriyanaiya/" target="_blank">
+                      <img class="facebook-icon" src="ASSEST/linked in.png" width="30px" height="30px">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                  <div class="team-image-wrapper">
+                    <img class="team-member-image" src="ASSEST/TEAM MEM 4.jpeg">
+                  </div>
+                  <p class="text-blk name">
+                    Sulanga Mahato
+                  </p>
+                  <p class="text-blk position">
+                    BACKEND DEVELOPER
+                  </p>
+                  <div class="social-icons">
+                    <a href="https://github.com/SulagnaMahato" target="_blank">
+                      <img class="twitter-icon" src="ASSEST/github-mark.png" width="25px" height="25px">
+                    </a>
+                    <a href="https://www.linkedin.com/in/sulagna-mahato-3490862b3/" target="_blank">
+                      <img class="facebook-icon" src="ASSEST/linked in.png" width="30px" height="30px">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                  <div class="team-image-wrapper">
+                    <img class="team-member-image" src="ASSEST/TEAM MEM 5.jpg">
+                  </div>
+                  <p class="text-blk name">
+                    Abu Sahid Mistri
+                  </p>
+                  <p class="text-blk position">
+                    FRONT-END DEVELOPER
+                  </p>
+                  <div class="social-icons">
+                    <a href="https://www.twitter.com" target="_blank">
+                      <img class="twitter-icon" src="ASSEST/github-mark.png" width="25px" height="25px">
+                    </a>
+                    <a href="https://www.linkedin.com/in/abu-sahid-mistri-a798612b9/" target="_blank">
+                      <img class="facebook-icon" src="ASSEST/linked in.png" width="30px" height="30px">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                  <div class="team-image-wrapper">
+                    <img class="team-member-image" src="ASSEST/TEAM  MEM 6.jpg">
+                  </div>
+                  <p class="text-blk name">
+                    Sagar Mazumder
+                  </p>
+                  <p class="text-blk position">
+                    FRONT-END DEVELOPER
+                  </p>
+                  <div class="social-icons">
+                    <a href="https://github.com/sagarmazumder" target="_blank">
+                      <img class="twitter-icon" src="ASSEST/github-mark.png" width="25px" height="25px">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                      <img class="facebook-icon" src="ASSEST/linked in.png" width="30px" height="30px">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                  <div class="team-image-wrapper">
+                    <img class="team-member-image" src="ASSEST/TEAM  MEM 7.jpg">
+                  </div>
+                  <p class="text-blk name">
+                    Rimjhim Saha
+                  </p>
+                  <p class="text-blk position">
+                    UI/UX DESIGNER
+                  </p>
+                  
+                  <div class="social-icons">
+                    <a href="https://www.twitter.com" target="_blank">
+                      <img class="twitter-icon" src="ASSEST/github-mark.png" width="25px" height="25px">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                      <img class="facebook-icon" src="ASSEST/linked in.png" width="30px" height="30px">
+                    </a>
+                  </div>
+                </div>
+            </div>
+             
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
+    <!-- Main content container -->
+    <div class="main-container">
+        <!-- Financial Summary -->
+        <div class="summary-container">
+            <h1>Total Remaining Balance: <br> ₹<span id="total-balance">0</span></h1>
+        </div>
+
+        <div class="balance-summary">
+            <div class="balance-item_credit">
+                <h3>Total Credit</h3>
+                <p id="total-credit">₹0.00</p>
+            </div>
+            <div></div>
+            <div class="balance-item_expense">
+                <h3>Total Expense</h3>
+                <p id="total-expense">₹0.00</p>
+            </div>
+        </div>
+
+        <!-- Transaction Form -->
+        <div class="transaction-container">
+            <h1>Add Transactions</h1>
+            <form id="transaction-form">
+                <input type="number" id="amount" placeholder="Amount" required>
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="date" id="date" required>
+            </form>
+            
+            <!-- Buttons -->
+            <div class="button-container">
+                <button id="credit-button" class="green-button">Credit</button>
+                <button id="debit-button" class="red-button">Expense</button>
+            </div>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="History-container">
+            <h1>Transaction History</h1>
+            <div class="search-container">
+                <input type="date" id="search-date" placeholder="Select date">
+                <button id="search-button">Search</button>
+            </div>
+
+            <table id="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-list">
+                    <!-- Transactions will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        // Function to open the team modal
+        function openTeamModal() {
+            document.getElementById('team-modal').style.display = 'block';
+        }
+
+        // Function to close the team modal
+        function closeTeamModal() {
+            document.getElementById('team-modal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside the content
+        window.onclick = function(event) {
+            let modal = document.getElementById('team-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+
+        function checkUserLoggedIn() {
+          const token = localStorage.getItem('token');
+          if (!token) {
+            window.location.href = '/login.html';
+          }
+        }
+        window.onload = checkUserLoggedIn;
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
