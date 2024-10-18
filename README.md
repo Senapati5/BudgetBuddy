@@ -18,7 +18,7 @@ To run the project locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/SulagnaMahato/BudgetBuddy.git
+    git clone https://github.com/Senapati5/BudgetBuddy.git
     cd BudgetBuddy
     ```
 
